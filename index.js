@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
-
+require('dotenv').config()
 const nodeMailer = require('nodemailer');
 const bodyParser = require('body-parser')
-
-const port = 4000;
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
@@ -41,6 +39,6 @@ app.post('/', (req, res) => {
         }
       })
 })
-app.listen(port, () => {
-    console.log(`The app is running in port ${port}`);
+app.listen(process.env.PORT || 3002, () => {
+    console.log(`The app is running in port ${process.env.PORT}`);
 })
