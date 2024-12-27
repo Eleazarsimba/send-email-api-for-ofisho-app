@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 const transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
     auth: {
-      user: 'eleazarsimba3000@gmail.com',
-      pass: 'ecqipljofwnplrim'
+      user: '',
+      pass: ''
     }
   });
 
